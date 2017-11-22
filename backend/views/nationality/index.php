@@ -12,7 +12,7 @@ $this->title = 'Nationality';
 ?>
 
 <div class="row form-container">
- 
+
 <div>
     <?php if(Yii::$app->session->hasFlash('success')): ?>
         <div class="alert alert alert-success alert-block"> <a class="close" data-dismiss="alert" href="#">×</a>
@@ -28,10 +28,10 @@ $this->title = 'Nationality';
     </div>
     <hr/>
 
-    <div class="form-search-container">    
+    <div class="form-search-container">
       <?php echo $this->render('_search', ['model' => $searchModel]); ?>
-    </div>   
- 
+    </div>
+
  </div>
 
 </div>
@@ -55,7 +55,7 @@ $this->title = 'Nationality';
 </div>
 
 <div class="row table-container">
- 
+
  <div class="col-md-12 col-sm-12 col-xs-12">
  <br/>
 
@@ -79,11 +79,11 @@ $this->title = 'Nationality';
                     <td class="tblalign_center" ><?php echo $row['description'];  ?></td>
                     <td class="last tblalign_center">
                         <a href="?r=nationality/view&id=<?php echo $row['id']; ?>" data-toggle="tooltip" data-placement="top" title="View Record" ><li class="fa fa-eye"></li> </a> |
-                        <a href="?r=nationality/update&id=<?php echo $row['id']; ?>" data-toggle="tooltip" data-placement="top" title="Edit Record" ><li class="fa fa-pencil-square"></li> </a> | 
+                        <a href="?r=nationality/update&id=<?php echo $row['id']; ?>" data-toggle="tooltip" data-placement="top" title="Edit Record" ><li class="fa fa-pencil-square"></li> </a> |
                         <a href="?r=nationality/delete-column&id=<?php echo $row['id']; ?>" onclick="return deleteConfirmation()" data-toggle="tooltip" data-placement="top" title="Delete Record" ><li class="fa fa-trash"></li> </a>
                     </td>
                 </tr>
-            <?php } ?> 
+            <?php } ?>
         <?php else: ?>
             <tr>
                 <td><span>No Record Found.</span></td>
@@ -91,10 +91,10 @@ $this->title = 'Nationality';
                 <td></td>
                 <td></td>
             </tr>
-        <?php endif; ?>  
+        <?php endif; ?>
     </tbody>
     </table>
- 
+
 </div>
 
 <div style="color:#fff">|<br/>|<br/></div>

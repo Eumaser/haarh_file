@@ -30,9 +30,9 @@ class PayrollController extends Controller
         $userRoleArray = ArrayHelper::map(Role::find()->all(), 'id', 'role');
         // $userRole = Role::find()->all();
 
-        foreach ( $userRoleArray as $uRId => $uRName ){ 
+        foreach ( $userRoleArray as $uRId => $uRName ){
             $permission = UserPermission::find()->where(['controller' => 'Payroll'])->andWhere(['role_id' => $uRId ])->andWhere(['status' => 1 ])->all();
-            
+
             $actionArray = [];
             foreach ( $permission as $p )  {
                $actionArray[] = $p->action;
@@ -44,14 +44,14 @@ class PayrollController extends Controller
                 $allow[$uRName] = true;
             }
 
-        }   
+        }
 
         return [
             'access' => [
                 'class' => AccessControl::className(),
                 // 'only' => ['index', 'create', 'update', 'view', 'delete'],
                 'rules' => [
-                    
+
                     [
                         'actions' => $action['developer'],
                         'allow' => $allow['developer'],
@@ -75,7 +75,7 @@ class PayrollController extends Controller
                         'allow' => $allow['customer'],
                         'roles' => ['customer'],
                     ]
-       
+
                 ],
             ],
 
@@ -99,18 +99,18 @@ class PayrollController extends Controller
 
         if( !empty(Yii::$app->request->get('SearchPayroll')['staff_id'])) {
             $getPayroll = $searchModel->searchStaffName(Yii::$app->request->get('SearchPayroll')['staff_id']);
-        
+
         }else {
             $getPayroll = $searchModel->getPayrolls();
 
         }
 
         return $this->render('index', [
-                    'searchModel' => $searchModel, 
-                    'getPayroll' => $getPayroll, 
-                    'dataProvider' => $dataProvider, 
-                    'errTypeHeader' => '', 
-                    'errType' => '', 
+                    'searchModel' => $searchModel,
+                    'getPayroll' => $getPayroll,
+                    'dataProvider' => $dataProvider,
+                    'errTypeHeader' => '',
+                    'errType' => '',
                     'msg' => ''
         ]);
     }
@@ -140,20 +140,20 @@ class PayrollController extends Controller
         $editStatus = '';
 
         return $this->render('create', [
-                            'model' => $model, 
+                            'model' => $model,
                             'editStatus' => $editStatus,
-                            'errTypeHeader' => '', 
-                            'errType' => '', 
+                            'errTypeHeader' => '',
+                            'errType' => '',
                             'msg' => ''
                         ]);
     }
 
     public function actionNew()
     {
-        $model = new Payroll();  
+        $model = new Payroll();
         $searchModel = new SearchPayroll();
 
-        if ( Yii::$app->request->post() ) {   
+        if ( Yii::$app->request->post() ) {
 
             $cutoffYr = date('y', strtotime(Yii::$app->request->post('cutoff')) );
             $getLastId = $searchModel->getPayrollId();
@@ -192,7 +192,7 @@ class PayrollController extends Controller
 
             } else {
                return json_encode(['message' => $model->errors, 'status' => 'Error']);
-            
+
             }
         }
     }
@@ -207,12 +207,12 @@ class PayrollController extends Controller
     {
         $model = $this->findModel($id);
         $editStatus = 'disabled';
-        
+
         return $this->render('update', [
-                        'model' => $model, 
+                        'model' => $model,
                         'editStatus' => $editStatus,
-                        'errTypeHeader' => '', 
-                        'errType' => '', 
+                        'errTypeHeader' => '',
+                        'errType' => '',
                         'msg' => ''
                     ]);
     }
@@ -259,7 +259,7 @@ class PayrollController extends Controller
 
         } else {
            return json_encode(['message' => $model->errors, 'status' => 'Error']);
-        
+
         }
     }
 
@@ -310,7 +310,7 @@ class PayrollController extends Controller
         $this->layout = 'print';
         $searchModel = new SearchPayroll();
 
-        $getPayrollInformation = $searchModel->getPayrolInformationById($id); 
+        $getPayrollInformation = $searchModel->getPayrolInformationById($id);
 
         return $this->render('_print-local-payslip',[
                             'model' => $this->findModel($id),
@@ -323,7 +323,7 @@ class PayrollController extends Controller
         $this->layout = 'print';
         $searchModel = new SearchPayroll();
 
-        $getPayrollInformation = $searchModel->getPayrolInformationById($id); 
+        $getPayrollInformation = $searchModel->getPayrolInformationById($id);
 
         return $this->render('_print-foreign-payslip',[
                             'model' => $this->findModel($id),

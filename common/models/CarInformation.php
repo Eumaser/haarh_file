@@ -40,7 +40,7 @@ class CarInformation extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['carplate', 'make', 'model', 'engine_no', 'year_mfg', 'chasis', 'points'], 'safe'],
+            [['carplate', 'make', 'model', 'engine_no', 'year_mfg', 'chasis', 'points','join_date','member_expiry','is_member'], 'safe'],
             [['customer_id', 'type', 'status'], 'integer'],
             [['carplate', 'make', 'model', 'engine_no', 'chasis'], 'string', 'max' => 50],
             [['year_mfg'], 'string', 'max' => 10],
@@ -67,7 +67,7 @@ class CarInformation extends \yii\db\ActiveRecord
         ];
     }
 
-     public function getCarInfoWithActiveCustomer() 
+     public function getCarInfoWithActiveCustomer()
     {
         $rows = new Query();
 
@@ -79,7 +79,7 @@ class CarInformation extends \yii\db\ActiveRecord
                 ->andWhere([ 'customer.is_blacklist' => 0 ])
                 ->orderBy(['car_information.carplate' => SORT_DESC])
                 ->all();
-        
+
         return $result;
     }
     public static function getCustomerId($car_information_id=null)

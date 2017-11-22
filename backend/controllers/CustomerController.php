@@ -157,16 +157,14 @@ class CustomerController extends Controller
 
             $model = new Customer();
 
-
-
             $contactPerson = (Yii::$app->request->post('contactPerson'))? Yii::$app->request->post('contactPerson') : '';
             $companyName = (Yii::$app->request->post('companyName'))? Yii::$app->request->post('companyName') : '';
             $uen_no = (Yii::$app->request->post('uenno'))? Yii::$app->request->post('uenno') : '';
             $companyAddress = (Yii::$app->request->post('address'))? Yii::$app->request->post('address') : '';
             $companyHanphoneNo = (Yii::$app->request->post('phoneNumber'))? Yii::$app->request->post('phoneNumber') : '';
-            $joinDate = (date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate')) ) : '0000-00-00';
-            $memberExpiry = (date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate')) ) : '0000-00-00';
-            $isMember = (Yii::$app->request->post('isMember') )? Yii::$app->request->post('isMember') : '';
+          //  $joinDate = (date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate')) ) : '0000-00-00';
+          //  $memberExpiry = (date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate')) ) : '0000-00-00';
+          //  $isMember = (Yii::$app->request->post('isMember') )? Yii::$app->request->post('isMember') : '';
             $companyOfficeNo = (Yii::$app->request->post('officeNumber'))? Yii::$app->request->post('officeNumber') : '';
             $faxNumber = (Yii::$app->request->post('faxNumber'))? Yii::$app->request->post('faxNumber') : '';
             $companyEmail = (Yii::$app->request->post('email'))? Yii::$app->request->post('email') : '';
@@ -190,9 +188,9 @@ class CustomerController extends Controller
             $model->email = $companyEmail;
             $model->remarks = $remarks;
             $model->is_blacklist = 0;
-            $model->join_date = $joinDate;
-            $model->member_expiry = $memberExpiry;
-            $model->is_member = $isMember;
+          //  $model->join_date = $joinDate;
+          //  $model->member_expiry = $memberExpiry;
+          //  $model->is_member = $isMember;
             $model->type = 1;
             $model->status = 1;
             $model->created_at = date('Y-m-d H:i:s');
@@ -213,7 +211,9 @@ class CustomerController extends Controller
                 $company_engineNo = Yii::$app->request->post('engineNo');
                 $company_yearMfg = Yii::$app->request->post('yearMfg');
                 $company_rewardPoints = Yii::$app->request->post('rewardPoints');
-
+                $company_joindate = Yii::$app->request->post('memberJoinDate'); //edr added these 3 to car information
+                $company_expiredate =Yii::$app->request->post('memberExpiryDate');//edr
+                $company_member = Yii::$app->request->post('isMember');//edr
 
                 foreach($company_vehicleNumber as $key => $companyCarRow){
                     $commpanyCarInfo = new CarInformation();
@@ -228,6 +228,19 @@ class CustomerController extends Controller
                     $commpanyCarInfo->points = $company_rewardPoints[$key]['value'];
                     $commpanyCarInfo->type = 1;
                     $commpanyCarInfo->status = 1;
+                    $commpanyCarInfo->join_date = (date('Y-m-d', strtotime($company_joindate[$key]['value']) ) ) ? date('Y-m-d',strtotime($company_joindate[$key]['value']) ):'0000-00-00';
+                    $commpanyCarInfo->member_expiry = (date('Y-m-d', strtotime($company_expiredate[$key]['value']) ) ) ? date('Y-m-d',strtotime($company_expiredate[$key]['value']) ):'0000-00-00';
+                    $commpanyCarInfo->is_member = $company_member[$key]['value'];
+                //    $commpanyCarInfo->join_date =$joinDate;
+                //    $commpanyCarInfo->member_expiry = $memberExpiry;
+              //      $commpanyCarInfo->is_member=$isMember;
+                    if ($commpanyCarInfo->join_date=='1970-01-01') {
+                       $commpanyCarInfo->join_date = null;
+                    }
+
+                    if ($commpanyCarInfo->member_expiry=='1970-01-01') {
+                       $commpanyCarInfo->member_expiry = null;
+                    }
 
                     $commpanyCarInfo->save();
                 }
@@ -240,7 +253,7 @@ class CustomerController extends Controller
                 //         ->send();
                 // }
 
-               return json_encode(['message' => 'Your record was successfully added in the database.', 'status' => 'Success']);
+               return json_encode(['message' => 'Your record was successfully added in the databases.', 'status' => 'Success']);
 
             } else {
                return json_encode(['message' => $model->errors, 'status' => 'Error']);
@@ -265,9 +278,10 @@ class CustomerController extends Controller
             $customerFaxNumber = (Yii::$app->request->post('customerFaxNumber'))? Yii::$app->request->post('customerFaxNumber') : '';
             $personEmail = (Yii::$app->request->post('email'))? Yii::$app->request->post('email') : '';
             $remarks = (Yii::$app->request->post('message'))? Yii::$app->request->post('message') : '';
-            $joinDate = (date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate')) ) : '0000-00-00';
-            $memberExpiry = (date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate')) ) : '0000-00-00';
-            $isMember = (Yii::$app->request->post('isMember') )? Yii::$app->request->post('isMember') : '';
+
+            //$joinDate = (date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate')) ) : '0000-00-00';
+            //$memberExpiry = (date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate')) ) : '0000-00-00';
+            //$isMember = (Yii::$app->request->post('isMember') )? Yii::$app->request->post('isMember') : '';
 
             $model->password = Yii::$app->request->post('password');
 
@@ -287,9 +301,9 @@ class CustomerController extends Controller
             $model->fax_number = $customerFaxNumber;
             $model->email = $personEmail;
             $model->remarks = $remarks;
-            $model->join_date =  $joinDate;
-            $model->member_expiry = $memberExpiry;
-            $model->is_member = $isMember;
+            //$model->join_date =  $joinDate;
+            //$model->member_expiry = $memberExpiry;
+            //$model->is_member = $isMember;
             $model->is_blacklist = 0;
             $model->type = 2;
             $model->status = 1;
@@ -299,8 +313,9 @@ class CustomerController extends Controller
             $model->updated_by = Yii::$app->user->identity->id;
             $model->deleted = 0;
 
+
             if($model->validate()) {
-               $model->save();
+                $model->save();
 
                 $customerId = $model->id;
 
@@ -311,8 +326,11 @@ class CustomerController extends Controller
                 $company_engineNo = Yii::$app->request->post('engineNo');
                 $company_yearMfg = Yii::$app->request->post('yearMfg');
                 $company_rewardPoints = Yii::$app->request->post('rewardPoints');
+                $company_joindate = Yii::$app->request->post('memberJoinDate'); //edr added these 3 to car information
+                $company_expiredate =Yii::$app->request->post('memberExpiryDate');//edr
+                $company_member = Yii::$app->request->post('isMember');//edr
 
-
+                //die(print_r($company_member ));
 
                 foreach($company_vehicleNumber as $key => $companyCarRow){
                     $commpanyCarInfo = new CarInformation();
@@ -327,6 +345,19 @@ class CustomerController extends Controller
                     $commpanyCarInfo->points = $company_rewardPoints[$key]['value'];
                     $commpanyCarInfo->type = 1;
                     $commpanyCarInfo->status = 1;
+                    $commpanyCarInfo->join_date = (date('Y-m-d', strtotime($company_joindate[$key]['value']) ) ) ? date('Y-m-d',strtotime($company_joindate[$key]['value']) ):'0000-00-00';
+                    $commpanyCarInfo->member_expiry = (date('Y-m-d', strtotime($company_expiredate[$key]['value']) ) ) ? date('Y-m-d',strtotime($company_expiredate[$key]['value']) ):'0000-00-00';
+                    $commpanyCarInfo->is_member = $company_member[$key]['value'];
+                    //$commpanyCarInfo->join_date =$joinDate;
+                    //$commpanyCarInfo->member_expiry = $memberExpiry;
+                    //$commpanyCarInfo->is_member=$isMember;
+                    if ($commpanyCarInfo->join_date=='1970-01-01') {
+                       $commpanyCarInfo->join_date = null;
+                    }
+
+                    if ($commpanyCarInfo->member_expiry=='1970-01-01') {
+                       $commpanyCarInfo->member_expiry = null;
+                    }
 
                     $commpanyCarInfo->save();
 
@@ -396,9 +427,9 @@ class CustomerController extends Controller
             $companyFaxNumber = (Yii::$app->request->post('companyFaxNumber'))? Yii::$app->request->post('companyFaxNumber') : '';
             $companyEmail = (Yii::$app->request->post('email'))? Yii::$app->request->post('email') : '';
             $remarks = (Yii::$app->request->post('message'))? Yii::$app->request->post('message') : '';
-            $joinDate = (date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate')) ) : '0000-00-00';
-            $memberExpiry = (date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate')) ) : '0000-00-00';
-            $isMember = (Yii::$app->request->post('isMember') )? Yii::$app->request->post('isMember') : '';
+      //      $joinDate = (date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate')) ) : '0000-00-00';
+      //      $memberExpiry = (date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate')) ) : '0000-00-00';
+      //      $isMember = (Yii::$app->request->post('isMember') )? Yii::$app->request->post('isMember') : '';
 
             $companyInfo->password = Yii::$app->request->post('password');
 
@@ -407,7 +438,7 @@ class CustomerController extends Controller
                 $companyInfo->generateAuthKey();
                 $companyInfo->role = 10;
             }
-
+          //  die('test');
             $companyInfo->fullname = $contactPerson;
             $companyInfo->company_name = $companyName;
             $companyInfo->uen_no = $uen_no;
@@ -417,9 +448,9 @@ class CustomerController extends Controller
             $companyInfo->fax_number = $companyFaxNumber;
             $companyInfo->email = $companyEmail;
             $companyInfo->remarks = $remarks;
-            $companyInfo->join_date = $joinDate;
-            $companyInfo->member_expiry = $memberExpiry;
-            $companyInfo->is_member = $isMember;
+            //$companyInfo->join_date = $joinDate;
+            //$companyInfo->member_expiry = $memberExpiry;
+            //$companyInfo->is_member = $isMember;
             $companyInfo->is_blacklist = 0;
             $companyInfo->type = 1;
             $companyInfo->status = 1;
@@ -445,6 +476,14 @@ class CustomerController extends Controller
                 $company_engineNo = Yii::$app->request->post('engineNo');
                 $company_yearMfg = Yii::$app->request->post('yearMfg');
                 $company_rewardPoints = Yii::$app->request->post('rewardPoints');
+                $company_joindate = Yii::$app->request->post('memberJoinDate'); //edr added these 3 to car information
+                $company_expiredate =Yii::$app->request->post('memberExpiryDate');//edr
+                $company_member = Yii::$app->request->post('isMember');//edr
+
+            //    print_r($company_joindate);
+            //    print_r($company_expiredate);
+          //      print_r($company_member);
+          //      die();
                 $company_carInfoId = Yii::$app->request->post('carInfoId');
                 $company_carId = Yii::$app->request->post('carId');
 
@@ -465,7 +504,20 @@ class CustomerController extends Controller
                     $commpanyCarInfo->points = $company_rewardPoints[$key]['value'];
                     $commpanyCarInfo->type = 1;
                     $commpanyCarInfo->status = 1;
+                    $commpanyCarInfo->join_date = (date('Y-m-d', strtotime($company_joindate[$key]['value']) ) ) ? date('Y-m-d',strtotime($company_joindate[$key]['value']) ):'0000-00-00';
+                    $commpanyCarInfo->member_expiry = (date('Y-m-d', strtotime($company_expiredate[$key]['value']) ) ) ? date('Y-m-d',strtotime($company_expiredate[$key]['value']) ):'0000-00-00';
+                    $commpanyCarInfo->is_member = $company_member[$key]['value'];
+                  //  $commpanyCarInfo->join_date =$joinDate; //edr
+                  //  $commpanyCarInfo->member_expiry = $memberExpiry;
+                  //  $commpanyCarInfo->is_member=$isMember;
+                  if ($commpanyCarInfo->join_date=='1970-01-01') {
+                     $commpanyCarInfo->join_date = null;
+                  }
 
+                  if ($commpanyCarInfo->member_expiry=='1970-01-01') {
+                     $commpanyCarInfo->member_expiry = null;
+                  }
+                  //die('test');
                     $commpanyCarInfo->save();
                 }
 
@@ -501,9 +553,9 @@ class CustomerController extends Controller
             $customerFaxNumber = (Yii::$app->request->post('customerFaxNumber'))? Yii::$app->request->post('customerFaxNumber') : '';
             $personEmail = (Yii::$app->request->post('email'))? Yii::$app->request->post('email') : '';
             $remarks = (Yii::$app->request->post('message'))? Yii::$app->request->post('message') : '';
-            $joinDate = (date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate')) ) : '0000-00-00';
-            $memberExpiry = (date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate')) ) : '0000-00-00';
-            $isMember = (Yii::$app->request->post('isMember') )? Yii::$app->request->post('isMember') : '';
+      //      $joinDate = (date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberJoinDate')) ) : '0000-00-00';
+      //      $memberExpiry = (date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate'))) )? date('Y-m-d', strtotime(Yii::$app->request->post('memberExpiryDate')) ) : '0000-00-00';
+        //    $isMember = (Yii::$app->request->post('isMember') )? Yii::$app->request->post('isMember') : '';
 
             $customerInfo->password = Yii::$app->request->post('password');
 
@@ -522,9 +574,9 @@ class CustomerController extends Controller
             $customerInfo->fax_number = $customerFaxNumber;
             $customerInfo->email = $personEmail;
             $customerInfo->remarks = $remarks;
-            $customerInfo->join_date =  $joinDate;
-            $customerInfo->member_expiry = $memberExpiry;
-            $customerInfo->is_member = $isMember;
+        //    $customerInfo->join_date =  $joinDate;
+        //    $customerInfo->member_expiry = $memberExpiry;
+      //      $customerInfo->is_member = $isMember;
             $customerInfo->is_blacklist = 0;
             $customerInfo->type = 2;
             $customerInfo->status = 1;
@@ -550,14 +602,18 @@ class CustomerController extends Controller
                 $company_engineNo = Yii::$app->request->post('engineNo');
                 $company_yearMfg = Yii::$app->request->post('yearMfg');
                 $company_rewardPoints = Yii::$app->request->post('rewardPoints');
-                $company_carInfoId = Yii::$app->request->post('carInfoId');
+                $company_joindate = Yii::$app->request->post('memberJoinDate'); //edr added these 3 to car information
+                $company_expiredate =Yii::$app->request->post('memberExpiryDate');//edr
+                $company_member = Yii::$app->request->post('isMember');//edr
 
+                $company_carInfoId = Yii::$app->request->post('carInfoId');
+            //    die(print_r($company_vehicleNumber));
 
                 foreach($company_vehicleNumber as $key => $companyCarRow){
                     $commpanyCarInfo = new CarInformation();
 
                     $commpanyCarInfo->customer_id = $id;
-                    $commpanyCarInfo->id = $company_carInfoId[$key]['value'];
+              //      $commpanyCarInfo->id = $company_carInfoId[$key]['value'];
                     $commpanyCarInfo->carplate = $company_vehicleNumber[$key]['value'];
                     $commpanyCarInfo->make = $company_carMake[$key]['value'];
                     $commpanyCarInfo->model = $company_carModel[$key]['value'];
@@ -567,6 +623,19 @@ class CustomerController extends Controller
                     $commpanyCarInfo->points = $company_rewardPoints[$key]['value'];
                     $commpanyCarInfo->type = 1;
                     $commpanyCarInfo->status = 1;
+                    $commpanyCarInfo->join_date = (date('Y-m-d', strtotime($company_joindate[$key]['value']) ) ) ? date('Y-m-d',strtotime($company_joindate[$key]['value']) ):'0000-00-00';
+                    $commpanyCarInfo->member_expiry = (date('Y-m-d', strtotime($company_expiredate[$key]['value']) ) ) ? date('Y-m-d',strtotime($company_expiredate[$key]['value']) ):'0000-00-00';
+                    $commpanyCarInfo->is_member = $company_member[$key]['value'];
+                //    $commpanyCarInfo->join_date =$joinDate; //edr
+                //    $commpanyCarInfo->member_expiry = $memberExpiry;
+              //      $commpanyCarInfo->is_member=$isMember;
+                    if ($commpanyCarInfo->join_date=='1970-01-01') {
+                       $commpanyCarInfo->join_date = null;
+                    }
+
+                    if ($commpanyCarInfo->member_expiry=='1970-01-01') {
+                       $commpanyCarInfo->member_expiry = null;
+                    }
 
                     $commpanyCarInfo->save();
                 }
@@ -697,6 +766,9 @@ class CustomerController extends Controller
         $engine_no = Yii::$app->request->post('engine_no');
         $year_mfg = Yii::$app->request->post('year_mfg');
         $reward_points = Yii::$app->request->post('reward_points');
+        $join_date = Yii::$app->request->post('join_date');
+        $expire_date = Yii::$app->request->post('expire_date');
+        $member = Yii::$app->request->post('member');
         $n = Yii::$app->request->post('n');
 
         $this->layout = false;
@@ -709,6 +781,9 @@ class CustomerController extends Controller
                             'engine_no' => $engine_no,
                             'year_mfg' => $year_mfg,
                             'reward_points' => $reward_points,
+                            'join_date'=>$join_date,
+                            'expire_date'=>$expire_date,
+                            'member'=>$member,
                             'n' => $n,
                         ]);
     }

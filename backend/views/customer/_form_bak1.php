@@ -199,26 +199,12 @@ $passwordCode = substr(uniqid('', true), -8);
 
     <div class="col-md-3">
         <label  class="form_label">JOIN DATE</label>
-            <?= $form->field($carModel, 'join_date')->textInput(['class' => 'form_input form-control', 'id' => 'joinDate', 'placeholder' => 'Join Date.'])->label(false) ?>
-    </div>
-
-    <div class="col-md-3">
-        <label  class="form_label">EXPIRE DATE</label>
-            <?= $form->field($carModel, 'member_expiry')->textInput(['class' => 'form_input form-control', 'id' => 'expirationDate', 'placeholder' => 'Expire Date.'])->label(false) ?>
+                <?= $form->field($carModel, 'make')->textInput(['class' => 'form_input form-control', 'id' => 'joinDate', 'placeholder' => 'Join Date.'])->label(false) ?>
     </div>
 
     <div>
         <input type="hidden" id="n" class="n" value="0" />
     </div>
-</div>
-
-<br>
-
-<div class="row">
-  <div class="col-md-3">
-    <label  class="form_label">MEMBER</label>
-      <?php echo  $form->field($model, 'is_member')->dropDownList(['3' => '- SELECT MEMBER TYPE HERE -', '1' => 'Yes', '0' => 'No'],['style' => 'width:100%;', 'class' => 'form_input select2_single', 'id' => 'isMember', 'data-placeholder' => 'CHOOSE MEMBER TYPE HERE'])->label(false) ?>
-  </div>
 </div>
 
 <div class="row">
@@ -235,7 +221,32 @@ $passwordCode = substr(uniqid('', true), -8);
     </div>
 </div>
 
+<div class="row">
+<br/>
+    <div class="search-label-container">
+        &nbsp;
+        <span class="search-label"><li class="fa fa-comment"></li> Other Information.</span>
+    </div>
+    <br/>
 
+    <div class="col-md-3">
+        <label  class="form_label">MEMBER</label>
+        <?=  $form->field($model, 'is_member')->dropDownList(['3' => '- SELECT MEMBER TYPE HERE -', '1' => 'Yes', '0' => 'No'],['style' => 'width:100%;', 'class' => 'form_input select2_single', 'id' => 'isMember', 'data-placeholder' => 'CHOOSE MEMBER TYPE HERE'])->label(false) ?>
+    </div>
+
+    <div class="col-md-3">
+        <label  class="form_label">JOIN DATE</label>
+        <input type="text" class="form_input form-control" id="joinDate" data-date-format = "dd-mm-yyyy" readonly="readonly" placeholder= "DD-MM-YYYY" />
+        <?= $form->field($model, 'join_date')->hiddenInput(['class' => 'form_input form-control', 'id' => 'memberJoinDate'])->label(false) ?>
+    </div>
+
+    <div class="col-md-3">
+        <label  class="form_label">MEMBER EXPIRY</label>
+        <input type="text" class="form_input form-control" id="expirationDate" data-date-format = "dd-mm-yyyy" readonly="readonly" placeholder= "DD-MM-YYYY" />
+        <?= $form->field($model, 'member_expiry')->hiddenInput(['class' => 'form_input form-control', 'id' => 'memberExpiryDate'])->label(false) ?>
+    </div>
+
+</div>
 <br/>
 
 <div class="row">

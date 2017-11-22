@@ -68,6 +68,30 @@ use yii\helpers\Url;
         <div class="quoSPLabel"> <b><span><i class="fa fa-money"></i> Reward Points </span></b> </div>
         <input type="text" id="car-item-rewardpoints-<?= $n ?>" name="rewardpoints[]" class="rewardPoints form_quoSP form-control" value="<?= $reward_points ?>" readonly />
     </div>
+    <div class="col-md-4">
+        <div class="quoSPLabel"> <b><span><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Join Date </span></b> </div>
+        <input type="text" id="car-item-joindate-<?= $n ?>" name="joindate[]" class="datepickers joindate form_quoSP form-control" value="<?= $join_date ?>" readonly style="pointer-events: none" />
+    </div>
+
+    <div class="col-md-4">
+        <div class="quoSPLabel"> <b><span><i class="fa fa-calendar-times-o" aria-hidden="true"></i> Expire Date </span></b> </div>
+        <input type="text" id="car-item-expiredate-<?= $n ?>" name="expiredate[]" class="datepickers expiredate form_quoSP form-control" value="<?= $expire_date ?>" readonly style="pointer-events: none" />
+    </div>
+
 </div>
+<br>
+
+<div class="car-item-<?= $n ?> row">
+
+    <div class="col-md-4">
+        <div class="quoSPLabel"> <b><span><i class="fa fa-calendar-times-o" aria-hidden="true"></i> Member </span></b> </div>
+        <select class="form_input form_quoSP form_control select2_single member" name="member[]" style="width:100%; height:30px;pointer-events: none" id="car-item-member-<?= $n ?>">
+          <option value="3" <?php if ($member == 3) echo 'selected' ?>>- SELECT MEMBER TYPE HERE -</option>
+          <option value="1" <?php if ($member == 1) echo 'selected' ?>>Yes</option>
+          <option value="0" <?php if ($member == 0) echo 'selected' ?>>No</option>
+        </select>
+    </div>
+
+</div>
+
 <input type="hidden" name="carid[]" value="" class="carId"/>
-

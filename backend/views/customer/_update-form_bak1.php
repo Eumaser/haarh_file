@@ -219,28 +219,11 @@ $customerFaxNumber = ($result['type'] == 2)? $result['fax_number'] : '';
         <label  class="form_label">REWARD POINTS</label>
                 <?= $form->field($carModel, 'make')->textInput(['class' => 'form_input form-control', 'id' => 'rewardPoints', 'placeholder' => 'Write reward points here.','type' => 'number'])->label(false) ?>
     </div>
-
-    <div class="col-md-3">
-        <label  class="form_label">JOIN DATE</label>
-            <?= $form->field($carModel, 'join_date')->textInput(['class' => 'form_input form-control', 'id' => 'joinDate', 'placeholder' => 'Join Date.'])->label(false) ?>
-    </div>
-
-    <div class="col-md-3">
-        <label  class="form_label">EXPIRE DATE</label>
-            <?= $form->field($carModel, 'member_expiry')->textInput(['class' => 'form_input form-control', 'id' => 'expirationDate', 'placeholder' => 'Expire Date.'])->label(false) ?>
-    </div>
 
     <div>
         <input type="hidden" id="n" class="n" value="<?= $lastId ?>" />
     </div> 
 </div>
-<br>
-<div class="row">
-  <div class="col-md-3">
-    <label  class="form_label">MEMBER</label>
-      <?php echo  $form->field($model, 'is_member')->dropDownList(['3' => '- SELECT MEMBER TYPE HERE -', '1' => 'Yes', '0' => 'No'],['style' => 'width:100%;', 'class' => 'form_input select2_single', 'id' => 'isMember', 'data-placeholder' => 'CHOOSE MEMBER TYPE HERE'])->label(false) ?>
-  </div>
-</div>
 
 <div class="row">
     <div class="col-md-9">
@@ -316,44 +299,9 @@ $customerFaxNumber = ($result['type'] == 2)? $result['fax_number'] : '';
                 <div class="quoSPLabel"> <b><span><i class="fa fa-money"></i> Reward Points </span></b> </div>
                 <input type="text" id="car-item-rewardpoints-<?= $carRow['id'] ?>" name="rewardpoints[]" class="rewardPoints form_quoSP form-control" value="<?= $carRow['points'] ?>" readonly />
             </div>
-            <div class="col-md-4">
-              <div class="quoSPLabel"> <b><span><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Join Date </span></b> </div>
-              <?php
-                if (!is_null($carRow['join_date'] )) {
-                  $jDate = date('d-m-Y', strtotime($carRow['join_date']) );
-                }else{
-                  $jDate = '';
-                }
-               ?>
-              <input type="text" id="car-item-joindate-<?= $carRow['id'] ?>" name="joindate[]" class="datepickers joindate form_quoSP form-control" value="<?= $jDate ?>" readonly style="pointer-events: none" />
-            </div>
-            <div class="col-md-4">
-                <div class="quoSPLabel"> <b><span><i class="fa fa-calendar-times-o" aria-hidden="true"></i> Expire Date </span></b> </div>
-                <?php
-                  if (!is_null($carRow['member_expiry'] )) {
-                    $mDate = date('d-m-Y', strtotime($carRow['member_expiry']) );
-                  }else{
-                    $mDate = '';
-                  }
-                 ?>
-                <input type="text" id="car-item-expiredate-<?= $carRow['id'] ?>" name="expiredate[]" class="datepickers expiredate form_quoSP form-control" value="<?= $mDate ?>" readonly style="pointer-events: none" />
-            </div>
-
             <input type="hidden" name="carid[]" value="<?= $carRow['id'] ?>" class="carId"/>
         </div>
-
-        <br>
-        <div class="car-item-<?= $carRow['id'] ?> row">
-          <div class="col-md-4">
-              <div class="quoSPLabel"> <b><span><i class="fa fa-calendar-times-o" aria-hidden="true"></i> Member </span></b> </div>
-              <select class="form_input form_control form_quoSP member" name="member[]" style="width:100%; height:30px;pointer-events:none" id="car-item-member-<?= $carRow['id'] ?>" >
-                <option value="3" <?php if ($carRow['is_member'] == 3) echo 'selected' ?>>- SELECT MEMBER TYPE HERE -</option>
-                <option value="1" <?php if ($carRow['is_member'] == 1) echo 'selected' ?>>Yes</option>
-                <option value="0" <?php if ($carRow['is_member'] == 0) echo 'selected' ?>>No</option>
-              </select>
-          </div>
-        </div>
-
+
     </div>
     
     <!-- for car_info ID -->
@@ -373,8 +321,25 @@ $customerFaxNumber = ($result['type'] == 2)? $result['fax_number'] : '';
         &nbsp;
         <span class="search-label"><li class="fa fa-comment"></li> Other Information.</span>
     </div>
-
-
+    <br/>
+
+    <div class="col-md-3">
+        <label  class="form_label">MEMBER</label>
+        <?=  $form->field($model, 'is_member')->dropDownList(['3' => '- PLEASE SELECT MEMBER TYPE HERE -', '1' => 'Yes', '0' => 'No'],['style' => 'width:100%;', 'class' => 'form_input select2_single', 'value' => $result['is_member'], 'data-placeholder' => 'CHOOSE MEMBER TYPE HERE', 'id' => 'isMember'])->label(false) ?>        
+    </div>
+
+    <div class="col-md-3">
+        <label  class="form_label">JOIN DATE</label>
+        <input type="text" class="form_input form-control" id="joinDate" data-date-format = "dd-mm-yyyy" readonly="readonly" value="<?= date('d-m-Y', strtotime($result['join_date'])) ?>" placeholder= "DD-MM-YYYY" />
+        <?= $form->field($model, 'join_date')->hiddenInput(['class' => 'form_input form-control', 'id' => 'memberJoinDate', 'value' => date('d-m-Y', strtotime($result['join_date'])) ])->label(false) ?>
+    </div>
+
+    <div class="col-md-3">
+        <label  class="form_label">MEMBER EXPIRY</label>
+        <input type="text" class="form_input form-control" id="expirationDate" data-date-format = "dd-mm-yyyy" readonly="readonly" value="<?= date('d-m-Y', strtotime($result['member_expiry'])) ?>" placeholder= "DD-MM-YYYY" />
+        <?= $form->field($model, 'member_expiry')->hiddenInput(['class' => 'form_input form-control', 'id' => 'memberExpiryDate', 'value' => date('d-m-Y', strtotime($result['member_expiry'])) ])->label(false) ?>
+    </div>
+
     <?= $form->field($model, 'id')->hiddenInput(['class' => 'form_input form-control', 'id' => 'id', 'value' => $result['id'] ])->label(false) ?>
 
 

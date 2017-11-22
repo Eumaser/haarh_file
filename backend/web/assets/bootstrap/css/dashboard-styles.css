@@ -1,0 +1,1554 @@
+@font-face {
+    font-family: Tahoma;
+    src: url('fonts/AucoinLight.ttf');
+}
+
+@font-face {
+    font-family: Arial;
+    src: url('fonts/Bernstein.ttf');
+}
+
+.buttonInHeader {
+	margin-left: -30px;
+	background: transparent; 
+	border-color: #5A738E; 
+	box-shadow: 1px 1px 1px 1px #999;
+}
+
+.buttonInHeaderLabel {
+	color: #444; 
+	font-weight: 600; 
+	font-size: 12px; 
+	font-family: Arial;
+}
+
+.side-navigator-active{
+	font-size: 12px; 
+	font-weight: bold;
+}
+
+.form-container {
+	margin-top: 50px; 
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px 1px #000; 
+	background-color: #fff;
+}
+
+.transactionform-container {
+	 margin-top: 50px; 
+	 border: solid 1px #eee;
+	 box-shadow: .5px .5px .5px .5px; 
+	 background-color: #fff;
+}
+
+.printform-container {
+	background-color: #fff;
+	margin: 0 auto;
+}
+
+.form-header {
+	color: #444444;
+}
+
+.table-container {
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px 1px #000; 
+	background-color: #fff;
+}
+
+#option-list-link {
+	box-shadow: 1px 1px 1px 1px #000;
+	border-radius: 5px;
+	color: #444;
+}
+
+#footer-container {
+	border: solid 1px #4b646f; 
+	background: #4b646f; 
+}
+
+#footer-content {
+	color: #E7E7E7 ; 
+	padding-left: 15px; 
+	font-weight: bold; 
+	font-size: 11px;
+}
+
+.form-btn {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.search-label {
+	font-weight: bold;
+}
+
+.form_label {
+	font-size: 11px;
+}
+
+.form_input {
+	font-size: 11px;
+	box-shadow: inset .5px .5px .5px 0 #707070;
+	color: #444;
+	border-radius: 5px;
+	/*text-align: center;*/
+}
+
+.mform_input {
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+.tblalign_center { 
+	text-align: center;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+#productImg { 
+	border: double 5px #666; 
+	border-radius: 10px; 
+	height: 175px; 
+	width: 200px;
+}
+
+#productImgIndex { 
+	border: double 5px #666; 
+	border-radius: 10px; 
+	height: 45px; 
+	width: 50px;
+}
+
+#inventoryProduct {
+	width: 100%; 
+	font-size: 11px; 
+	text-transform: uppercase;
+}
+
+#stockLabel {
+	font-size: 12px; 
+	font-style: italic;
+}
+
+#tblStocks {
+	border: solid 1px #eee; 
+	border-radius: 10px;
+	max-width: 75%;
+	box-shadow: .4px .4px .4px .4px;
+}
+
+.stockTableQty {
+	text-align: center; 
+	font-size: 15px; 
+	font-weight: bold; 
+	color: green;
+}
+
+.tblstockTh0 {
+	font-weight: bold;
+}
+
+.tblstockTh {
+	text-align: center; 
+	font-weight: bold;
+}
+
+.tblstockTd {
+	font-size: 12px; 
+	text-transform: uppercase; 
+	margin-top: 30px;
+}
+
+.quotationHeader {
+	background: #2A3F54; 
+	padding-left: 10px; 
+	font-family: Arial; 
+	color: #73879C;
+}
+
+.quotationHeaderLabel {
+	color:#fff;
+}
+
+.quotationLabel {
+	font-weight: bold;
+	color: #2A3F54;
+}
+
+.form_qRInput {
+	font-size: 12px; 
+	font-weight: bold; 
+	color: #333; 
+	text-align: center;
+	box-shadow: 1px 1px 1px 1px;
+}
+
+.selectedLabel {
+	font-family: Arial; 
+	font-size: 12px; 
+	color: #444; 
+	font-weight: 600;
+}
+
+.qSelect {
+	width: 100%;
+}
+
+.qtxtarea{
+	border:solid 1px #eee; 
+	border-radius: 4px; 
+	box-shadow: 1px 1px 1px 1px
+}
+
+.form_quoSP {
+	font-size: 11px; 
+	font-family: Arial;
+	text-align: center; 
+	border-radius: 4px;
+	box-shadow: 1px 1px 1px 1px;
+}
+
+.quoSPLabel {
+	text-align: center;
+	color: #2A3F54;
+}
+
+.quoSPAction {
+	margin-left: -1px; 
+	text-align: center
+}
+
+.tblselecteditemList {
+	border: solid 1px #eee;
+
+}
+
+#quoCustomerSide {
+	border-right:solid 1px #eee;
+	border-bottom:solid 1px #eee;
+	box-shadow: .3px .3px .3px .3px;
+}
+
+.qtblalign_center { 
+	text-align: center;
+	font-size: 11.5px;
+	text-transform: uppercase;
+}
+
+.grandTotal {
+	text-align: center;
+	border:solid 1px #fff;
+	background: #fff;
+	color:#444;
+	font-family: Arial; 
+	font-size: 12px;
+	font-weight: 600;
+}
+
+#point_to_price {
+	text-align: center;
+	border:solid 1px #fff;
+	color:#444;
+	font-family: Arial; 
+	font-size: 12px;
+	font-weight: 600;
+}
+
+#quoSelectedContainer {
+	border: solid 1px #eee; 
+	border-radius: 10px; 
+	box-shadow: 1px 1px 1px 1px; 
+	max-width: 98%; 
+	margin: 0 auto;
+}
+
+#selecteditems {
+	border: solid .5px #73879C;
+}
+
+.qpreviewth {
+	background: #000; 
+	color: #fff;
+}
+
+.quoPreviewRemarks {
+	margin-top: 10px; 
+	font-size: 11px; 
+	font-weight: bold; 
+	background-color: #fff;
+}
+
+#invCustomerSide {
+	border-right:solid 2px #eee;
+	border-bottom:solid 2px #eee;
+	box-shadow: .5px .5px .5px .5px;
+}
+
+.invoiceHeader {
+	background: #2A3F54; 
+	padding-left: 10px; 
+	font-family: Arial; 
+	color: #73879C;
+}
+
+.invoiceHeaderLabel {
+	color:#fff;
+}
+
+.invoiceLabel {
+	font-weight: bold;
+	color: #2A3F54;
+}
+
+.invSPLabel {
+	text-align: center;
+	color: #2A3F54;
+}
+
+.form_iRInput {
+	font-size: 12px; 
+	font-weight: bold; 
+	color: #333; 
+	text-align: center;
+	box-shadow: 1px 1px 1px 1px;
+}
+
+.form_invSP {
+	font-size: 11.5px; 
+	text-align: center; 
+	border-radius: 4px;
+	box-shadow: 1px 1px 1px 1px
+}
+
+#invSelectedContainer {
+	border: solid 1px #eee; 
+	border-radius: 10px; 
+	box-shadow: 1px 1px 1px 1px; 
+	max-width: 98%; 
+	margin: 0 auto;
+}
+
+.pmLabel {
+	font-weight: bold;
+	font-size: 11.5px;
+}
+
+.form_pmInput {
+	font-size: 11px;
+	box-shadow: inset .5px .5px .5px 0 #707070;
+	color: #444;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.form_pm {
+	font-size: 11px;
+	box-shadow: inset .5px .5px .5px 0 #707070;
+	color: #444;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.form_pmTxtArea {
+	font-size: 11.5px; 
+	border-radius: 4px;
+}
+
+#top-nav {
+	text-align: center; 
+	color: #5A738E; 
+	font-weight: bold;
+}
+
+.pdfTable {
+	border: solid 1px #000;
+}
+
+.pdf_number {
+	background: #eee; 
+	text-align: center;
+}
+
+.pdf_headBg {
+	background: #eee;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.pdf_body {
+	text-align: center; 
+	font-size: 11px;
+}
+
+.transactionFormAlign {
+	margin: 0 auto
+}
+
+.quotationViewContainer { 
+	box-shadow: 1px 1px 1px 1px #000;
+	border-radius: 5px;
+
+}
+
+.branchRowContainer {
+	text-align: center; 
+	font-size: 12px;
+}
+
+.customerRowWrapper {
+	border: solid .5px #73879C; 
+	margin: 0 auto; 
+	font-size: 11px; 
+	font-family: Arial;
+}
+
+.customerRowContainer {
+	text-transform: uppercase; 
+	padding-left: 5px;
+}
+
+.servicespartsContainerHeader {
+	font-size: 11px; 
+	text-align: center; 
+	text-transform: capitalize;
+}
+
+.servicespartsLists {
+	font-size: 10.5px; 
+	text-align: center; 
+	color: #41464c;
+}
+
+.remarksamountdueWrapper {
+	margin: 0 auto; 
+	border: solid .5px #73879C;
+	margin-top: -25px;
+}
+
+.remarksamountdueHeader {
+	font-size: 13px; 
+	font-weight: bold;
+	margin-top: -25px;
+}
+
+.remarksContent {
+	font-size: 11px;
+	color: #444; 
+	text-transform: uppercase;
+	background: #eee;
+	border: solid 1px #ccc;
+}
+
+.amountdueContainer {
+	/*border-left: solid .5px #73879C;*/
+}
+
+.amountdueTbl {
+	border: 1px solid #ccc;
+	background: #eee;
+}
+
+.amountdueTh {
+	font-size: 10.5px;
+}
+
+.amountdueTd {
+	font-size: 11px;
+	color: #000;
+	font-weight: 600;
+}
+
+.printquotationDate {
+	font-size: 12px;
+}
+
+.printquotationBranchContainer {
+	margin: 0 auto;
+	font-size: 13px;
+}
+
+.print-buttons {
+	width: 250px;
+}
+
+.invoiceViewContainer {
+	box-shadow: 1px 1px 1px 1px #000;
+	border-radius: 5px;
+}
+
+.paymentContainer {
+	border: solid 1px #eee;
+	/*border-top-right-radius: 20px;
+	border-top-left-radius: 20px;*/
+	box-shadow: 0px 0px 1px 0px;
+	border-radius:5px;
+}
+
+.paymentContainerHeader {
+	color: black; 
+	border-top-right-radius: 20px; 
+	border-top-left-radius: 20px;
+}
+
+.paymentContainerHeaderLabel {
+	color:black 
+	margin-left: 10px;
+	height: 50px;
+}
+
+.invoicePaymentViewContainer {
+	box-shadow: 0px 0px 1px 0px;
+	border-radius: 5px;
+}
+
+.printinvoiceBranchContainer {
+	margin: 0 auto;
+	font-size: 13px;
+}
+
+.remarkspaymentsWrapper {
+	margin: 0 auto; 
+	border: solid .5px #73879C;
+}
+
+.paymentsContainer {
+	border-left: solid .5px #73879C;
+}
+
+.paymentsTbl {
+	border: 1px solid #eee;
+}
+
+.modePayment {
+	color: #1479B8;
+	font-weight: bold;
+}
+
+.dots {
+	font-weight: bold;
+}
+
+.modePayment {
+	color: #1479B8;
+	font-weight: bold;
+}
+
+.amountPaid {
+	color: #1ABB9C;
+	font-weight: bold;
+}
+
+.amountDiscounts {
+	color: red;
+	font-weight: bold;
+}
+
+.reportsTable {
+	border: 1px solid #ccc;
+}
+
+.reportsTableHeader {
+	background: #000;
+	color: #fff;
+}
+
+.btnreportsAlign {
+	text-align: right;
+}
+
+.viewDesign {
+	font-size: 11px; 
+	text-transform: uppercase;
+	background: #eee;
+}
+
+.partsDashboard {
+	font-size: 10.5px; 
+	text-transform: uppercase; 
+	font-family: Arial;
+	font-weight: 600;
+}
+
+.partsTotalDashboard {
+	text-align: right; 
+	font-size: 12px; 
+	font-family: Arial; 
+	font-weight: 600;
+}
+
+.partsNoRecordDashboard {  
+	font-size: 12px; 
+	text-transform: uppercase; 
+    font-family: Arial;
+    font-weight: 600;
+}
+
+.pendingTable {
+	border: solid 1px #eee;
+}
+
+.pendingNoRecordDashboard {
+	padding-left: 10px; 
+	font-weight: 600;
+	font-family: Arial; 
+	font-size: 14px;
+}
+
+.searchCustomerLabel {
+	font-style: italic; 
+	font-size: 11px; 
+	font-family: Arial;
+}
+
+.selectedContainerHeader {
+	background: #2A3F54; 
+	border-top-right-radius: 10px; 
+	border-top-left-radius: 10px; 
+	color: #fff;
+}
+
+#logoContainer {
+	font-size: 50px; 
+	border: double 2px #fff; 
+	border-radius: 30px;
+}
+
+#quoEditItemList {
+	color: #2A3F54; 
+}
+
+#quoSaveItemList {
+	color: #2A3F54; 
+}
+
+#quoDeleteItemList {
+	color: #2A3F54; 
+}
+
+#invAddItemList {
+	color: #2A3F54; 
+}
+
+#invEditItemList {
+	color: #2A3F54; 
+}
+
+#invSaveItemList {
+	color: #2A3F54; 
+}
+
+#quoAddItemList {
+	color: #fff;
+	border: solid 1px #fff; 
+}
+
+#invDeleteItemList {
+	color: #2A3F54; 
+}
+
+.revenuesDashboard {
+	border-radius: 5px;
+	box-shadow: .5px .5px .5px .5px #000;
+	font-family: Arial;
+}
+
+.revenuesContainer {
+	text-align: center; 
+	font-size: 18px;
+	font-family: Arial;
+}
+
+.customerNameLabel {
+	text-transform: uppercase; 
+	color: #2A3F54;
+}
+
+.receiptLogo {
+	/*height: 25%; */
+	/*width: 100%; */
+	max-width: 90%;
+}
+
+.jiReceiptLogo {
+	/*height: 25%; */
+	/*width: 100%; */
+        margin-left:-5px;
+	max-width: 80%;
+}
+
+.invoice-box .jiReceiptLogo {
+    width: 85px; 
+    /*max-width: 100%;*/
+}
+.branchcustomerContainer {
+	margin-top: 1px;	
+	text-align: left; 
+	margin-left: -40px;
+	font-size: 14px; 
+	text-transform: capitalize;
+}
+
+.branchName {
+	line-height: 170%;
+	font-family: Arial;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.addressInfo {
+	line-height: 120%;
+	margin-top: 0px;
+	font-size: 10px;
+	font-family: Arial;
+}
+
+.email {
+	text-transform: lowercase;
+}
+.jobsheetinvoiceLabel {
+	text-align: left; 
+	font-size: 13px; 
+    line-height: 100%;
+	font-family: Arial;
+}
+
+.jobsheetinvoiceAlign {
+	margin-left: 30px;
+}
+
+.jobsheetinvoiceHeaderAlign {
+	margin-left:27px;
+	font-weight:bold;
+	margin-top:4px
+}
+
+.jobsheetinvoiceHeaderAlign1 {
+	margin-left: 27px;
+    margin-top: 4px;
+}
+
+.jobsheetinvoiceDate {
+	font-size: 11px; 
+	font-family: Arial;
+	line-height: 150%;
+	text-align: right;
+}
+
+.jobsheetinvoiceNo {
+	font-size: 11px; 
+	font-family: Arial;
+	line-height: 150%;
+	text-align: left;
+}
+
+.jobsheetinvoiceVehicle {
+	font-size: 11px; 
+	font-family: Arial;
+	line-height: 150%;
+	text-align: right;
+}
+
+.jobsheetinvoiceMake {
+	font-size: 11px; 
+	font-family: Arial;
+	line-height: 150%;
+	text-align: right;
+}
+
+.jobsheetinvoiceModel {
+	font-size: 11px; 
+	font-family: Arial;
+	line-height: 150%;
+	text-align: right;
+}
+
+.jobsheetinvoiceComeIn {
+	font-size: 11px; 
+	font-family: Arial;
+	line-height: 150%;
+	text-align: right;
+}
+
+.jobsheetinvoiceComeOut {
+	font-size: 11px; 
+	font-family: Arial;
+	line-height: 150%;
+	text-align: right;
+}
+
+.jobsheetinvoiceCompanyTel {
+	font-size: 11px; 
+	font-family: Arial;
+	line-height: 150%;
+	text-align: right;
+}
+
+.jobsheetinvoiceHomeTel {
+	font-size: 11px; 
+	font-family: Arial;
+	line-height: 150%;
+	text-align: right;
+}
+
+.jobsheetinvoiceHanphoneTel {
+	font-size: 11px; 
+	font-family: Arial;
+	line-height: 150%;
+	text-align: right;
+}
+
+.jobsheetinvoiceMileage {
+	font-size: 11px; 
+	font-family: Arial;
+	line-height: 150%;
+	text-align: right;
+}
+
+.jobsheetinvoicePoints {
+	font-size: 11px; 
+	font-family: Arial;
+	line-height: 150%;
+	text-align: right;
+}
+
+.jobsheetinvoiceTerms {
+	font-size: 11px; 
+	font-family: Arial;
+	line-height: 150%;
+	text-align: left;
+}
+
+#receiptorderNumberHeader {
+	width: 7%; 
+	text-align: center; 
+	font-size: 11px;
+}
+
+#receiptorderDescriptionHeader {
+	text-align: left; 
+	font-size: 11px;
+}
+
+#receiptorderQtyHeader {
+	width: 10%; 
+	text-align: center; 
+	font-size: 11px;
+}
+
+#receiptorderSubtotalHeader {
+	width: 20%; 
+	text-align: center; 
+	font-size: 11px;
+}
+
+.receiptorderTable {
+	border: solid 1px #666;
+}
+
+#orderNumbers {
+	width: 7%; 
+	text-align: center; 
+	font-size: 11px; 
+	line-height: 175%;
+}
+
+#orderDescriptions {
+	text-align: left; 
+	font-size: 11px; 
+	line-height: 175%;
+}
+
+#orderQtys {
+	width: 10%; 
+	text-align: center; 
+	font-size: 11px; 
+	line-height: 175%;
+}
+
+#orderSubtotals {
+	width: 20%; 
+	text-align: center; 
+	font-size: 11px; 
+	line-height: 175%;
+}
+
+.carSize {
+	width: 100%; 
+}
+
+.termsandconditionsLists {
+	text-align: justify; 
+	font-size: 11px;  
+	line-height: 100%;
+}
+
+#invoiceorderNumberHeader {
+	width: 7%; 
+	text-align: center; 
+	font-size: 11px;
+}
+
+#invoiceorderDescriptionHeader {
+	width: 30%; 
+	text-align: left; 
+	font-size: 11px;
+}
+
+#invoiceorderUnitPriceHeader {
+	width: 10%; 
+	text-align: center; 
+	font-size: 11px;
+}
+
+#invoiceorderQtyHeader {
+	width: 10%; 
+	text-align: center; 
+	font-size: 11px;
+}
+
+#invoiceorderDiscountHeader {
+	width: 10%; 
+	text-align: center; 
+	font-size: 11px;
+}
+
+#invoiceorderAddDiscountHeader {
+	width: 10%; 
+	text-align: center; 
+	font-size: 11px;
+}
+
+#invoiceorderSubTotalHeader {
+	width: 20%; 
+	text-align: center; 
+	font-size: 11px;
+}
+
+#invoiceorderNumber {
+	width: 7%; 
+	text-align: center; 
+	font-size: 11px;
+	line-height: 175%;
+}
+
+#invoiceorderDescription {
+	width: 30%; 
+	text-align: left; 
+	font-size: 11px;
+	line-height: 175%;
+}
+
+#invoiceorderUnitPrice {
+	width: 10%; 
+	text-align: center; 
+	font-size: 11px;
+	line-height: 175%;
+}
+
+#invoiceorderQty {
+	width: 10%; 
+	text-align: center; 
+	font-size: 11px;
+	line-height: 175%;
+}
+
+#invoiceorderDiscount {
+	width: 10%; 
+	text-align: center; 
+	font-size: 11px;
+	line-height: 175%;
+}
+
+#invoiceorderAddDiscount {
+	width: 10%; 
+	text-align: center; 
+	font-size: 11px;
+	line-height: 175%;
+}
+
+#invoiceorderSubTotal {
+	width: 20%; 
+	text-align: center; 
+	font-size: 11px;
+	line-height: 175%;
+}
+
+#invoicesubTableLabel {
+	width: 76%; 
+	text-align: right; 
+	font-size: 11px
+	line-height: 175%;
+}
+
+#invoicesubTableInfo {
+	width: 20%; 
+	text-align: center; 
+	font-size: 11px;
+	line-height: 175%;
+}
+
+.attendedSideContainer {
+	width: 30%;
+}
+
+.dateSideContainer {
+	width: 30%;
+}
+
+.customerSideContainer {
+	width: 40%;
+}
+
+.receiptbottomInfo {
+	text-align: center; 
+	font-size: 11px;
+}
+
+.invisibleDiv {
+	border: solid 1px #fff; 
+	height: 100px; 
+	color: #fff;
+}
+
+.modalMultiplePaymentDesign {
+	width: 90%;
+}
+
+.invoice-box{
+    max-width:800px;
+    margin:auto;
+    padding:30px;
+    border:1px solid #eee;
+    box-shadow:0 0 10px rgba(0, 0, 0, .15);
+    font-size:16px;
+    line-height:24px;
+    font-family: Arial ,'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    color:#555;
+    border-bottom: 0;
+}
+
+.paymentinfoContainer {
+	background-color: #000; 
+	color: transparent; 
+	border-top-right-radius: 20px; 
+	border-top-left-radius: 20px;
+}
+
+.paymentLabelHeader {
+	font-weight: bold;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 11.5px;
+}
+
+.paymentinfoLabel {
+	font-weight: bold;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 11px;
+	/*text-decoration: underline;*/
+}
+
+.paymentLabel {
+	font-weight: bold;
+	color: #000;
+	font-family: Arial;
+	font-size: 11.5px;
+	text-align: center;
+}
+
+.paymentSubLabel {
+	font-weight: bold;
+	color: #000;
+	font-family: Arial;
+	font-size: 11px;
+	text-align: center;
+}
+
+.invoice-box table{
+    width:100%;
+    line-height:inherit;
+    text-align:left;
+}
+
+.balanceAmount {
+	font-weight: 600; 
+	color: #000; 
+	text-decoration: underline;
+}
+
+.hrLine {
+	border-top: 1px solid #111111;
+	margin-bottom: 10px
+}
+
+.settingsSubLabel {
+	color:red; 
+	font-size: 10px;
+}
+
+.errorMsg {
+	font-family: Arial;
+	font-size: 11px;
+	color: red;
+}
+
+.customerInfoContainer {
+	/*margin-top: 70px; */
+	/*margin-left:-10px;*/
+	font-size:11px;
+}
+
+.customerName {
+	font-size: 11px;
+	font-family: Arial;
+	line-height: 125%;
+	text-transform: uppercase;
+}
+
+.customerAddressInfo { 
+	line-height: 125%;
+	font-size: 11px;
+	font-family: Arial;
+	text-transform: uppercase;
+}
+
+.psBranchContainer {
+	margin-top: -10px;	
+	text-align: left; 
+	margin-left: -25px;
+	font-size: 14px; 
+	font-family: Arial;
+}
+
+.psAddressInfo {
+	margin-top: -10px; 
+	line-height: 100%;
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psContactnoInfo {
+	line-height: 125%;
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psFaxInfo {
+	line-height: 125%;
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psEmailInfo {
+	line-height: 125%;
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psWebsiteInfo {
+	line-height: 125%;
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psInfoAlign {
+	margin-left: 50px;
+}
+
+.PayslipInfoLabel {
+	line-height: 140%;
+	text-align: left; 
+	font-size: 13px; 
+	font-family: Arial;
+}
+
+.psPayslipNo {
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psPayslipMonth {
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psDateIssue {
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psDept {
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psJobTitle {
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psNationality {
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psGender {
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psStaffContainer {
+	margin-top: 5px; 
+	margin-left: 5px;
+	font-family: Arial;
+	text-align: left;
+}
+
+.psEmpCode {
+	line-height: 125%;
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psEmpIc {
+	line-height: 200%;
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psEmpName {
+	line-height: 130%;
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psEarningContainer {
+	margin-top: -5px;	
+	text-align: left; 
+	margin-left: -5px;
+	text-transform: uppercase;
+}
+
+.psStandardPay {
+	line-height: 150%;
+	font-size: 10px;
+	font-family: Arial;
+}
+
+.psOtHour {
+	line-height: 150%;
+	font-size: 10px;
+	font-family: Arial;
+}
+
+.psOtRatePerHour {
+	line-height: 150%;
+	font-size: 10px;
+	font-family: Arial;
+}
+
+.psOtPay {
+	line-height: 150%;
+	font-size: 10px;
+	font-family: Arial;
+}
+
+.psAllowance {
+	line-height: 150%;
+	font-size: 10px;
+	font-family: Arial;
+}
+
+.psNonTaxAllowance {
+	line-height: 150%;
+	font-size: 10px;
+	font-family: Arial;
+}
+
+.psLevySupplement {
+	line-height: 150%;
+	font-size: 10px;
+	font-family: Arial;
+}
+
+.psTotalEarning {
+	line-height: 300%;
+	font-size: 12px;
+	font-family: Arial;
+}
+
+.psDeductionContainer {
+	margin-top: -5px;	
+	text-align: left; 
+	margin-left: -5px;
+	text-transform: uppercase;
+}
+
+.psCashAdvance {
+	line-height: 150%;
+	font-size: 10px;
+	font-family: Arial;
+}
+
+.psOtherDeduction {
+	line-height: 150%;
+	font-size: 10px;
+	font-family: Arial;
+}
+
+.psMonthlyLevyCharge {
+	line-height: 150%;
+	font-size: 10px;
+	font-family: Arial;
+}
+
+.psEmployeeCpf {
+	line-height: 150%;
+	font-size: 10px;
+	font-family: Arial;
+}
+
+.psEmployerCpf {
+	line-height: 150%;
+	font-size: 10px;
+	font-family: Arial;
+}
+
+.psLEmployerCpf {
+	line-height: 150%;
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psLTotalCpf {
+	line-height: 175%;
+	font-size: 11px;
+	font-family: Arial;
+}
+
+.psTotalDeduction {
+	line-height: 300%;
+	font-size: 12px;
+	font-family: Arial;
+}
+
+.psNettPay {
+	line-height: 300%;
+	font-size: 12px;
+	font-family: Arial;
+}
+
+.psHeaders {
+	font-family: Arial; 
+	font-weight: bold;
+}
+
+.psNotesContainer {
+	border: solid 1px #444; 
+	font-size: 11px; 
+	border-radius: 3px;
+}
+
+.psNotesContent {
+	margin-left: 5px; 
+	height: 75px; 
+	line-height: 150%;
+}
+
+.psReceiverContent {
+	margin-top: -20px; 
+	font-size: 11px; 
+	font-family: Arial; 
+	line-height: 165%;
+}
+
+/* Table inside JQuery */
+.viewTableContent {
+	border: solid 1px #eee; 
+	font-size: 11px; 
+	font-family: Arial; 
+	color: #444;
+}
+
+/* DASHBOARD */
+
+.dashboardContentContainer {
+	background: #ffffff; 
+	border-radius: 5px; 
+	box-shadow: 1px 1px 1px 1px #000;
+}
+
+/* PRINT */
+
+.hidePriceLabel {
+	font-size: 12px; 
+	font-family: Arial; 
+	font-weight: 600;
+}
+
+.jobsheetinvoiceLabel table{
+	margin-top:10px;
+}
+
+.invoice-box table td{
+    padding:0px 3px;
+    vertical-align:top;
+}
+
+.invoice-box table tr.top table td.title{
+    line-height:45px;
+}
+
+.invoice-box table.headers{
+    border: solid 1px #41464c; 
+    color: #fff;
+    font-size: 11px;
+    line-height: 110%;
+    text-align: center;
+    background-color: #41464c; 
+	-webkit-background-color: #41464c;
+    -moz-background-color: #41464c;
+    -o-background-color: #41464c;
+}
+
+.invoice-box table.receiptorderTable{
+    border: solid 1px #41464c; 
+    color: #000;
+    font-size: 11px;
+    line-height: 100%;
+    text-align: center;
+    background-color: #fff; 
+	-webkit-background-color: #fff;
+    -moz-background-color: #fff;
+    -o-background-color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    .invoice-box table td{
+	    padding:5px;
+	    vertical-align:top;
+	}
+
+	.invoice-box table tr.top table td.title{
+	    line-height:45px;
+	}
+
+	.invoice-box table.headers{
+	    border: solid 1px #41464c; 
+	    color: #fff;
+	    font-size: 11px;
+	    line-height: 110%;
+	    text-align: center;
+	    background-color: #41464c; 
+		-webkit-background-color: #41464c;
+	    -moz-background-color: #41464c;
+	    -o-background-color: #41464c;
+	}
+
+	.invoice-box table.receiptorderTable{
+	    border: solid 1px #41464c; 
+	    color: #000;
+	    font-size: 11px;
+	    line-height: 100%;
+	    text-align: center;
+	    background-color: #fff; 
+		-webkit-background-color: #fff;
+	    -moz-background-color: #fff;
+	    -o-background-color: #fff;
+	}
+
+}
+
+/* form validation style */
+.error {
+   color: #ff0000;
+   font-size: 12px;
+   margin-top: 5px;
+   margin-bottom: 0;
+}
+ 
+.inputTxtError {
+   border: 1px solid #ff0000;
+   color: #0e0e0e;
+}
+
+/* staff */
+.columnAlignment {
+	margin-left: 25px;
+}
+
+
+
+
+@media print {
+
+    .print:last-child {
+	    page-break-after: auto;
+	}
+}
+
+.ol-terms {
+	margin-left: -20px;
+}
+
+
+@media print {
+
+    .dont-print {
+        visibility: hidden;
+    }
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }/* Payslip */
+
+}
+
+
+.jobsheetinvoiceLabel table {
+    margin-left: 35px;
+}
+
+.margin-top-70{
+	margin-top:70px;
+}
+
+.company_name_row
+{
+	font-size:11px;
+	display:block;
+	line-height:14px;
+	padding-top:43px
+}
+
+.address_row{
+	font-size:11px;
+	display:block;
+	line-height:14px
+}
+
+.paymentContainer .select2-selection--single{
+	box-shadow: 0px 0px 0px 0px;
+}
+
+.total_div td{
+    font-size: 10.5px;
+	font-weight:bold;
+    padding: 0px 3px;
+    line-height: 175%;
+}
+
+.total_row{
+}
+
+.price_row{
+}

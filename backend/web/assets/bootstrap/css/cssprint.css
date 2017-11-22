@@ -1,0 +1,1192 @@
+@font-face {
+    font-family: Tahoma;
+    src: url('fonts/AucoinLight.ttf');
+}
+
+@font-face {
+    font-family: Arial;
+    src: url('fonts/Bernstein.ttf');
+}
+
+.servicespartsLists {
+    font-size: 11px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+/* PRINT */
+
+.invoice-box table td{
+    padding:5px;
+    vertical-align:top;
+}
+
+.invoice-box table tr.top table td.title{
+    line-height:45px;
+}
+
+.invoice-box table.headers{
+    border: solid 1px #000; 
+    color: #fff;
+    font-size: 11px;
+    line-height: 110%;
+    text-align: center;
+    background-color: #000; 
+    -webkit-background-color: #000;
+    -moz-background-color: #000;
+    -o-background-color: #000;
+}
+
+.invoice-box table.receiptorderTable{
+    border: solid 1px #000; 
+    color: #000;
+    font-size: 11px;
+    line-height: 100%;
+    text-align: center;
+    background-color: #fff; 
+    -webkit-background-color: #fff;
+    -moz-background-color: #fff;
+    -o-background-color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    .invoice-box table td{
+        padding:5px;
+        vertical-align:top;
+    }
+
+    .invoice-box table tr.top table td.title{
+        line-height:45px;
+    }
+
+    .invoice-box table.headers{
+        border: solid 1px #000; 
+        color: #fff;
+        font-size: 11px;
+        line-height: 110%;
+        text-align: center;
+        background-color: #000; 
+        -webkit-background-color: #000;
+        -moz-background-color: #000;
+        -o-background-color: #000;
+    }
+
+    .invoice-box table.receiptorderTable{
+        border: solid 1px #000; 
+        color: #000;
+        font-size: 11px;
+        line-height: 100%;
+        text-align: center;
+        background-color: #fff; 
+        -webkit-background-color: #fff;
+        -moz-background-color: #fff;
+        -o-background-color: #fff;
+    }
+
+    .invoice-box img.receiptLogo {
+        /*height: 25%; */
+        /*width: 100%; */
+        max-width: 100%;
+    }
+
+    .invoice-box div.branchName {
+        line-height: 200%;
+        font-family: Arial;
+        font-size: 13px;
+    }
+
+    .invoice-box div.addressInfo {
+        line-height: 120%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.jobsheetinvoiveLabel {
+        text-align: left; 
+        font-size: 13px; 
+        line-height: 175%;
+        font-family: Arial;
+    }
+
+    .invoice-box div.jobsheetinvoiveAlign {
+        margin-left: 50px;
+    }
+
+    .invoice-box div.jobsheetinvoiveDate {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveNo {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveVehicle {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveMake {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveModel {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveComeIn {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveComeOut {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveCompanyTel {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveHomeTel {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveHanphoneTel {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveMileage {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoivePoints {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveTerms {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    #receiptorderNumberHeader {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #receiptorderDescriptionHeader {
+        width: 50%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #receiptorderQtyHeader {
+        width: 20%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #receiptorderSubtotalHeader {
+        width: 20%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    .receiptorderTable {
+        border: solid 1px #666;
+    }
+
+    #orderNumbers {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px; 
+        line-height: 175%;
+    }
+
+    #orderDescriptions {
+        width: 50%; 
+        text-align: center; 
+        font-size: 11px; 
+        line-height: 175%;
+    }
+
+    #orderQtys {
+        width: 20%; 
+        text-align: center; 
+        font-size: 11px; 
+        line-height: 175%;
+    }
+
+    #orderSubtotals {
+        width: 20%; 
+        text-align: center; 
+        font-size: 11px; 
+        line-height: 175%;
+    }
+
+    .carSize {
+        width: 100%; 
+        height: 100%;
+    }
+
+    .termsandconditionsLists {
+        text-align: left; 
+        font-size: 10px; 
+        font-weight: 600; 
+        line-height: 120%;
+    }
+
+    #invoiceorderNumberHeader {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #invoiceorderDescriptionHeader {
+        width: 30%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #invoiceorderUnitPriceHeader {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #invoiceorderQtyHeader {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #invoiceorderDiscountHeader {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #invoiceorderAddDiscountHeader {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #invoiceorderSubTotalHeader {
+        width: 20%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #invoiceorderNumber {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    #invoiceorderDescription {
+        width: 30%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    #invoiceorderUnitPrice {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    #invoiceorderQty {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    #invoiceorderDiscount {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    #invoiceorderAddDiscount {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    #invoiceorderSubTotal {
+        width: 20%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    #invoicesubTableLabel {
+        width: 80%; 
+        text-align: right; 
+        font-size: 11px
+        line-height: 175%;
+    }
+
+    #invoicesubTableInfo {
+        width: 20%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    .invoice-box div.customerInfoContainer {
+        margin-top: 75px; 
+        margin-left: -100px;
+    }
+
+    .invoice-box div.customerName {
+        font-size: 11px;
+        font-family: Arial;
+        line-height: 125%;
+    }
+
+    .invoice-box div.customerAddressInfo { 
+        line-height: 125%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.invoice-box div.psBranchContainer {
+        margin-top: -10px;  
+        text-align: left; 
+        margin-left: -25px;
+        font-size: 14px; 
+        font-family: Arial;
+    }
+
+    .invoice-box div.psAddressInfo {
+        margin-top: -10px; 
+        line-height: 100%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psContactnoInfo {
+        line-height: 125%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psFaxInfo {
+        line-height: 125%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psEmailInfo {
+        line-height: 125%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psWebsiteInfo {
+        line-height: 125%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psInfoAlign {
+        margin-left: 50px;
+    }
+
+    .invoice-box div.PayslipInfoLabel {
+        line-height: 140%;
+        text-align: left; 
+        font-size: 13px; 
+        font-family: Arial;
+    }
+
+    .invoice-box div.psPayslipNo {
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psPayslipMonth {
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psDateIssue {
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psDept {
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psJobTitle {
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psNationality {
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psGender {
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psStaffContainer {
+        margin-top: 5px; 
+        margin-left: 5px;
+    }
+
+    .invoice-box div.psEmpCode {
+        line-height: 125%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psEmpIc {
+        line-height: 200%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psEmpName {
+        line-height: 130%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psEarningContainer {
+        margin-top: -5px;   
+        text-align: left; 
+        margin-left: -5px;
+        text-transform: uppercase;
+    }
+
+    .invoice-box div.psStandardPay {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psOtHour {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psOtRatePerHour {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psOtPay {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psAllowance {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psNonTaxAllowance {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psLevySupplement {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psTotalEarning {
+        line-height: 300%;
+        font-size: 12px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psDeductionContainer {
+        margin-top: -5px;   
+        text-align: left; 
+        margin-left: -5px;
+        text-transform: uppercase;
+    }
+
+    .invoice-box div.psCashAdvance {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psOtherDeduction {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psMonthlyLevyCharge {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psEmployeeCpf {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psEmployerCpf {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psLEmployerCpf {
+        line-height: 150%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psLTotalCpf {
+        line-height: 175%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psTotalDeduction {
+        line-height: 300%;
+        font-size: 12px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psNettPay {
+        line-height: 300%;
+        font-size: 12px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psHeaders {
+        font-family: Arial; 
+        font-weight: bold;
+    }
+
+    .invoice-box div.psNotesContainer {
+        border: solid 1px #444; 
+        font-size: 11px; 
+        border-radius: 3px;
+    }
+
+    .invoice-box div.psNotesContent {
+        margin-left: 5px; 
+        height: 75px; 
+        line-height: 150%;
+    }
+
+    .invoice-box div.psReceiverContent {
+        margin-top: -20px; 
+        font-size: 11px; 
+        font-family: Arial; 
+        line-height: 165%;
+    }
+}
+
+@media print {
+    .invoice-box table.headers{
+        background-color: #000 !important;
+        -webkit-print-color-adjust: exact;
+        -moz-print-color-adjust: exact;
+        -o-print-color-adjust: exact;
+    }
+
+    .invoice-box table.headers td{
+        color: #fff !important; 
+        -webkit-print-color-adjust: exact;
+        -moz-print-color-adjust: exact;
+        -o-print-color-adjust: exact;
+    }
+
+    .invoice-box img.receiptLogo {
+        /*height: 25%; */
+        /*width: 100%; */
+        max-width: 100%;
+    }
+
+    .invoice-box div.branchName {
+        line-height: 200%;
+        font-family: Arial;
+        font-size: 13px;
+    }
+
+    .invoice-box div.addressInfo {
+        line-height: 120%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.jobsheetinvoiveLabel {
+        text-align: left; 
+        font-size: 13px; 
+        line-height: 175%;
+        font-family: Arial;
+    }
+
+    .invoice-box div.jobsheetinvoiveAlign {
+        margin-left: 50px;
+    }
+
+    .invoice-box div.jobsheetinvoiveDate {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveNo {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveVehicle {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveMake {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveModel {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveComeIn {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveComeOut {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveCompanyTel {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveHomeTel {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveHanphoneTel {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveMileage {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoivePoints {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    .invoice-box div.jobsheetinvoiveTerms {
+        font-size: 11px; 
+        font-family: Arial;
+        line-height: 175%;
+    }
+
+    #receiptorderNumberHeader {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #receiptorderDescriptionHeader {
+        width: 50%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #receiptorderQtyHeader {
+        width: 20%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #receiptorderSubtotalHeader {
+        width: 20%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    .receiptorderTable {
+        border: solid 1px #666;
+    }
+
+    #orderNumbers {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px; 
+        line-height: 175%;
+    }
+
+    #orderDescriptions {
+        width: 50%; 
+        text-align: center; 
+        font-size: 11px; 
+        line-height: 175%;
+    }
+
+    #orderQtys {
+        width: 20%; 
+        text-align: center; 
+        font-size: 11px; 
+        line-height: 175%;
+    }
+
+    #orderSubtotals {
+        width: 20%; 
+        text-align: center; 
+        font-size: 11px; 
+        line-height: 175%;
+    }
+
+    .carSize {
+        width: 100%; 
+        height: 100%;
+    }
+
+    .termsandconditionsLists {
+        text-align: left; 
+        font-size: 10px; 
+        font-weight: 600; 
+        line-height: 120%;
+    }
+
+    #invoiceorderNumberHeader {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #invoiceorderDescriptionHeader {
+        width: 30%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #invoiceorderUnitPriceHeader {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #invoiceorderQtyHeader {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #invoiceorderDiscountHeader {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #invoiceorderAddDiscountHeader {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #invoiceorderSubTotalHeader {
+        width: 20%; 
+        text-align: center; 
+        font-size: 11px;
+    }
+
+    #invoiceorderNumber {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    #invoiceorderDescription {
+        width: 30%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    #invoiceorderUnitPrice {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    #invoiceorderQty {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    #invoiceorderDiscount {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    #invoiceorderAddDiscount {
+        width: 10%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    #invoiceorderSubTotal {
+        width: 20%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    #invoicesubTableLabel {
+        width: 80%; 
+        text-align: right; 
+        font-size: 11px
+        line-height: 175%;
+    }
+
+    #invoicesubTableInfo {
+        width: 20%; 
+        text-align: center; 
+        font-size: 11px;
+        line-height: 175%;
+    }
+
+    .invoice-box div.customerInfoContainer {
+        margin-top: 75px; 
+        margin-left: -100px;
+    }
+
+    .invoice-box div.customerName {
+        font-size: 11px;
+        font-family: Arial;
+        line-height: 125%;
+    }
+
+    .invoice-box div.customerAddressInfo { 
+        line-height: 125%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.invoice-box div.psBranchContainer {
+        margin-top: -10px;  
+        text-align: left; 
+        margin-left: -25px;
+        font-size: 14px; 
+        font-family: Arial;
+    }
+
+    .invoice-box div.psAddressInfo {
+        margin-top: -10px; 
+        line-height: 100%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psContactnoInfo {
+        line-height: 125%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psFaxInfo {
+        line-height: 125%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psEmailInfo {
+        line-height: 125%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psWebsiteInfo {
+        line-height: 125%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psInfoAlign {
+        margin-left: 50px;
+    }
+
+    .invoice-box div.PayslipInfoLabel {
+        line-height: 140%;
+        text-align: left; 
+        font-size: 13px; 
+        font-family: Arial;
+    }
+
+    .invoice-box div.psPayslipNo {
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psPayslipMonth {
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psDateIssue {
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psDept {
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psJobTitle {
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psNationality {
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psGender {
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psStaffContainer {
+        margin-top: 5px; 
+        margin-left: 5px;
+    }
+
+    .invoice-box div.psEmpCode {
+        line-height: 125%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psEmpIc {
+        line-height: 200%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psEmpName {
+        line-height: 130%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psEarningContainer {
+        margin-top: -5px;   
+        text-align: left; 
+        margin-left: -5px;
+        text-transform: uppercase;
+    }
+
+    .invoice-box div.psStandardPay {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psOtHour {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psOtRatePerHour {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psOtPay {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psAllowance {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psNonTaxAllowance {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psLevySupplement {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psTotalEarning {
+        line-height: 300%;
+        font-size: 12px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psDeductionContainer {
+        margin-top: -5px;   
+        text-align: left; 
+        margin-left: -5px;
+        text-transform: uppercase;
+    }
+
+    .invoice-box div.psCashAdvance {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psOtherDeduction {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psMonthlyLevyCharge {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psEmployeeCpf {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psEmployerCpf {
+        line-height: 150%;
+        font-size: 10px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psLEmployerCpf {
+        line-height: 150%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psLTotalCpf {
+        line-height: 175%;
+        font-size: 11px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psTotalDeduction {
+        line-height: 300%;
+        font-size: 12px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psNettPay {
+        line-height: 300%;
+        font-size: 12px;
+        font-family: Arial;
+    }
+
+    .invoice-box div.psHeaders {
+        font-family: Arial; 
+        font-weight: bold;
+    }
+
+    .invoice-box div.psNotesContainer {
+        border: solid 1px #444; 
+        font-size: 11px; 
+        border-radius: 3px;
+    }
+
+    .invoice-box div.psNotesContent {
+        margin-left: 5px; 
+        height: 75px; 
+        line-height: 150%;
+    }
+
+    .invoice-box div.psReceiverContent {
+        margin-top: -20px; 
+        font-size: 11px; 
+        font-family: Arial; 
+        line-height: 165%;
+    }
+
+}
